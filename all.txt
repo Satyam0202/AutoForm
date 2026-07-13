@@ -1,0 +1,169 @@
+AutoForm AI
+===========
+
+Project Report Summary
+----------------------
+
+1. Project Title
+AutoForm AI
+
+2. Project Overview
+AutoForm AI is an intelligent desktop application designed to automate the process of filling online forms using a user-defined profile. The system helps reduce manual effort, improve efficiency, and minimize repetitive data entry across job applications, registration forms, surveys, and other web-based forms. The project combines desktop application development, browser automation, and intelligent field matching into a single solution.
+
+3. Problem Statement
+Manually filling repetitive web forms is time-consuming and error-prone. Users often need to enter the same personal, academic, and professional details repeatedly across multiple websites and application portals. This creates inefficiency and increases the likelihood of mistakes. AutoForm AI addresses this problem by enabling users to store their information once and reuse it whenever needed.
+
+4. Aim and Objectives
+Aim:
+To develop a smart desktop application that can detect form fields from a webpage and automatically populate them using saved user profile data.
+
+Objectives:
+- To reduce the time required for filling repetitive forms.
+- To improve accuracy and consistency in data entry.
+- To provide a user-friendly interface for managing personal and professional profile information.
+- To automate browser-based form interactions using modern automation tools.
+- To support future enhancement through AI-based field recognition and smarter matching.
+
+5. Scope of the Project
+The current version of the project focuses on:
+- Creating a desktop application using Electron.
+- Providing a React-based user interface for profile management.
+- Launching a browser session for Chrome or Edge.
+- Detecting form fields from the currently opened webpage.
+- Matching detected form fields with saved profile values.
+- Automatically filling supported input fields.
+- Supporting password login and OTP-based password recovery.
+
+6. Proposed Solution
+AutoForm AI stores user profile information locally and uses browser automation to interact with online forms. Once the user enters a URL, the application opens the target webpage and identifies form components such as input fields, text areas, select dropdowns, and choice-based elements. It then maps the detected fields with the saved profile and populates the relevant values automatically.
+
+7. Key Features
+- Desktop application built with Electron
+- Modern user interface developed using React and TypeScript
+- Support for Chrome and Edge browser automation
+- Form field detection from web pages
+- Automatic autofill of detected values
+- Saving and reusing user profile information
+- Learning of newly detected fields for future use
+- Password-based login system
+- OTP-based password reset through email
+- Support for text inputs, dropdowns, radio/choice groups, and file-upload-like form elements
+
+8. Working Methodology
+1. The user enters or updates their profile information through the application interface.
+2. The profile data is stored locally for future reuse.
+3. The user provides a URL of a web form.
+4. The application launches the browser and opens the target page.
+5. The system analyzes the page structure and detects form fields.
+6. The detected fields are matched against the stored profile using contextual and label-based rules.
+7. Matching values are inserted into the corresponding form controls.
+8. The system provides feedback about the number of fields filled or skipped.
+
+9. System Architecture
+The project follows a modular architecture consisting of:
+- Frontend Layer: React-based UI for user interaction
+- Main Process Layer: Electron process responsible for application lifecycle and browser integration
+- Automation Layer: Playwright-based logic for interacting with browser pages
+- IPC Layer: Communication between renderer and main processes
+- Authentication Layer: Password login and OTP recovery services
+
+10. Core Modules
+- User Interface Module
+  Handles profile entry, login, password reset, and autofill actions.
+
+- Profile Management Module
+  Stores user data such as name, email, phone number, address, education, skills, experience, and social links.
+
+- Browser Automation Module
+  Opens the browser, navigates to the desired URL, detects form elements, and fills them.
+
+- Form Detection and Matching Module
+  Analyzes field labels, contexts, and surrounding page structure to identify suitable values.
+
+- Authentication Module
+  Implements login and password recovery using OTP verification.
+
+11. Technologies Used
+- Electron: For building the cross-platform desktop application
+- React: For the user interface
+- TypeScript: For type-safe application development
+- Vite: For frontend build and development workflow
+- Playwright: For browser automation and web interaction
+- Node.js: For backend and main process logic
+- nodemailer: For sending OTP emails
+- CSS: For styling the interface
+- ESBuild and custom build scripts: For building Electron assets
+
+12. Important Project Files
+- src/main/main.ts
+  Main Electron application entry point responsible for window creation and app lifecycle.
+
+- src/renderer/App.tsx
+  Main UI component containing profile management, login flow, and automation controls.
+
+- src/main/automation/browser.ts
+  Core implementation for browser launching, field detection, and autofill behavior.
+
+- src/main/ipc/browser.ts
+  Handles communication between the renderer process and main process.
+
+- src/main/preload.ts
+  Provides secure access to Electron APIs from the renderer process.
+
+- src/main/otpService.ts
+  Implements OTP generation and email-based password reset functionality.
+
+- scripts/build-electron.mjs
+  Responsible for building the Electron application artifacts.
+
+13. Project Structure Overview
+- src/main/: Main process and automation logic
+- src/renderer/: Frontend React application
+- public/: Static assets
+- scripts/: Build and automation scripts
+- dist-electron/: Compiled Electron output
+
+14. Functional Requirements
+- The system should allow users to create and edit a personal profile.
+- The system should save profile information locally.
+- The system should open a specified website in a browser.
+- The system should detect form fields from the webpage.
+- The system should match form fields with profile data.
+- The system should populate matching form values automatically.
+- The system should support login and password recovery.
+
+15. Non-Functional Requirements
+- The application should be easy to use and responsive.
+- The system should provide reliable browser automation.
+- The interface should be visually clear and intuitive.
+- The project should be maintainable and extensible for future upgrades.
+- Sensitive user data should be handled with care and improved security measures in future versions.
+
+16. Advantages
+- Saves time by minimizing repetitive manual entry
+- Reduces human errors in form filling
+- Increases productivity for job seekers, students, and professionals
+- Provides a centralized way to manage personal information
+- Can be extended with AI-based automation and cloud features
+
+17. Limitations
+- The current approach depends on rule-based field matching.
+- Some complex or dynamically generated forms may not be handled accurately.
+- Browser automation performance may vary based on page structure and website restrictions.
+- The current profile storage is local and does not yet provide full cloud or multi-user support.
+
+18. Future Scope
+- Integration of AI and machine learning for smarter field recognition
+- Support for more advanced and dynamic web forms
+- Cloud-based profile synchronization
+- Multi-user authentication and account management
+- Export and import of profile data
+- Support for PDF and document-based forms
+- Mobile and browser extension versions
+- Stronger security and encryption for stored personal data
+
+19. Current Status of the Project
+The project is currently in the prototype or MVP stage. The core features such as profile management, browser-based form detection, autofill, and password recovery flow have been implemented, demonstrating the feasibility of the concept.
+
+20. Conclusion
+AutoForm AI is a practical and innovative solution aimed at simplifying online form filling through automation. By combining desktop application development, browser automation, and intelligent form-matching logic, the project offers a strong foundation for future growth. It has significant potential to become a more powerful AI-driven productivity tool in the future.
