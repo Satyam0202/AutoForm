@@ -1,76 +1,165 @@
-# AutoForm AI
+# 🚀 AutoForm AI
 
-AutoForm AI is a desktop application that helps users fill online forms quickly using a smart profile form and browser automation. It combines React, Electron, Vite, and Playwright to capture user details, organize them into a reusable profile, and automate form completion on supported websites.
+> **A Smart Desktop Application for Automated Web Form Filling**
 
-## Screenshots
+AutoForm AI is a desktop application that simplifies online form filling by automatically entering saved user information into supported websites. Built with **React**, **Electron**, **TypeScript**, **Playwright**, and **SQLite**, it helps users save time by eliminating repetitive manual data entry.
 
-![Login screen](/sceenshot/Data.png)
+---
 
-![Main application view]("./sceenshot\Main.png")
-![Save Data Of Profile]("./sceenshot\Data.png")
+## ✨ Key Features
 
-## Features
+- 📝 Save personal and professional profile information
+- ⚡ Automatically fill online forms
+- 🌐 Browser automation powered by Playwright
+- 💻 Cross-platform desktop application using Electron
+- 💾 Local profile storage with SQLite
+- 🔒 Secure local data management
+- 🎯 Clean and user-friendly interface
+- 🔄 Reusable profile for multiple websites
 
-- Smart profile form for personal and professional details
-- Built-in field mapping for common resume and application information
-- Desktop experience powered by Electron
-- Browser automation using Playwright
-- Local storage for saved profile data
-- Demo-ready flow for quick testing and exploration
+---
 
-## Tech Stack
+# 📸 Screenshots
 
-- React + TypeScript
-- Vite
-- Electron
-- Playwright
-- Node.js
+## 🔐 Login Screen
 
-## Getting Started
+![Login Screen](screenshot/login.png)
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Start the app in development mode:
-   ```bash
-   npm run dev
-   ```
-3. The app will launch the Electron desktop interface with the Vite development server.
+---
 
-### Optional setup for Playwright
+## 🏠 Main Dashboard
 
-If browser binaries are not installed yet, run:
+![Main Dashboard](screenshot/Main.png)
+
+---
+
+## 👤 User Profile
+
+![User Profile](screenshot/Data.png)
+
+---
+
+# 🛠 Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| React | User Interface |
+| TypeScript | Type Safety |
+| Vite | Fast Development |
+| Electron | Desktop Application |
+| Playwright | Browser Automation |
+| SQLite | Local Database |
+| Node.js | Runtime Environment |
+
+---
+
+# ⚙️ How It Works
+
+1. User enters profile information.
+2. Profile is stored locally.
+3. User opens a supported website.
+4. Playwright detects form fields.
+5. AutoForm AI automatically fills matching fields.
+6. User saves time with one-click automation.
+
+---
+
+# 📂 Project Structure
+
+```
+AutoForm AI
+│
+├── src
+│   ├── main
+│   ├── renderer
+│   ├── shared
+│
+├── scripts
+├── screenshot
+├── dist-electron
+└── package.json
+```
+
+---
+
+# 🚀 Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Satyam0202/AutoForm.git
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run Project
+
+```bash
+npm run dev
+```
+
+### Install Playwright Browsers
 
 ```bash
 npx playwright install
 ```
 
-## Available Scripts
+---
 
-- `npm run dev` - start the app in development mode
-- `npm run build` - build the web app
-- `npm run build:electron` - build the Electron app assets
-- `npm run lint` - run ESLint checks
-- `npm run preview` - preview the built app
+# 📜 Available Scripts
 
-## Project Structure
+```bash
+npm run dev
+```
 
-- `src/main` - Electron main process and IPC handlers
-- `src/renderer` - React-based UI
-- `src/shared` - shared app logic and assets
-- `scripts` - build helpers
-- `dist-electron` - generated Electron build output
+Runs the application in development mode.
 
-## How It Works
+```bash
+npm run build
+```
 
-1. Enter your profile details in the app.
-2. The app maps your information to common form fields.
-3. Playwright opens the target page and fills the form automatically.
-4. Your data stays stored locally for future use.
+Builds the React application.
 
-## Notes
+```bash
+npm run build:electron
+```
 
-- This project is designed for local automation and demo use.
-- Automation behavior may vary depending on the target website and its form structure.
+Builds the Electron desktop application.
 
+```bash
+npm run preview
+```
+
+Previews the production build.
+
+```bash
+npm run lint
+```
+
+Runs ESLint.
+
+---
+
+# 🎯 Future Improvements
+
+- 🤖 AI-based field detection
+- 📄 Resume parsing
+- ☁️ Cloud synchronization
+- 👥 Multiple user profiles
+- 🌍 Browser extension support
+- 🔐 User authentication
+- 📊 Dashboard analytics
+
+---
+
+# 📌 About
+
+AutoForm AI was developed as an academic project to explore desktop application development, browser automation, and modern web technologies. The project demonstrates how browser automation can reduce repetitive work and improve productivity.
+
+---
+
+⭐ If you like this project, don't forget to give it a star.
