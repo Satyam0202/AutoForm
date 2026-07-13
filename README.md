@@ -4,7 +4,7 @@ AutoForm AI is a desktop application that helps users fill online forms quickly 
 
 ## Screenshots
 
-![Login screen]("./sceenshot/Data.png")
+![Login screen](/sceenshot/Data.png)
 
 ![Main application view]("./sceenshot\Main.png")
 ![Save Data Of Profile]("./sceenshot\Data.png")
